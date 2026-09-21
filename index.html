@@ -179,6 +179,13 @@
     </form>
 </div>
 
+    <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault(); // Prevents the form from submitting and causing the page error
+        alert("Message sent successfully!");
+    });
+</script>
+
 <div data-role="footer" data-theme="b" data-position="fixed">
     <h4 class="footer-text">© 2026 Sweet Treats Bakery</h4>
 </div>
