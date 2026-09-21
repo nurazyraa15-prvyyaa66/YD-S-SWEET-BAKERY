@@ -186,9 +186,11 @@
 </div>
 
 <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault(); // Prevents the form from submitting and causing the page error
-        alert("Message sent successfully!");
+    $(document).on("pageinit", "#contact", function() {
+        $("#contactForm").on("submit", function(e) {
+            e.preventDefault(); // elak reload page
+            alert("Message sent successfully!");
+        });
     });
 </script>
 
